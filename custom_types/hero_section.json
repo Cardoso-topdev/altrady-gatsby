@@ -1,0 +1,36 @@
+{
+  "Main": {
+    "kicker": {
+      "type": "Text",
+      "config": {
+        "label": "kicker"
+      }
+    },
+    "header": {
+      "type": "Text",
+      "config": {
+        "label": "header"
+      }
+    },
+    "content": {
+      "type": "Text",
+      "config": {
+        "label": "content"
+      }
+    },
+    "description": {
+      "type": "Text",
+      "config": {
+        "label": "description"
+      }
+    },
+    "img": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "Image"
+      }
+    }
+  }
+}

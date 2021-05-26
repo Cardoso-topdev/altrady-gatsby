@@ -1,0 +1,42 @@
+{
+  "Main" : {
+    "title" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "title"
+      }
+    },
+    "content" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "content"
+      }
+    },
+    "testimonial" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "testimonial"
+      }
+    },
+    "username" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "username"
+      }
+    },
+    "position" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "position"
+      }
+    },
+    "img" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "Image"
+      }
+    }
+  }
+}

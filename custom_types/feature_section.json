@@ -1,0 +1,38 @@
+{
+  "Main": {
+    "feature_item": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "img": {
+            "type": "Image",
+            "config": {
+              "constraint": {},
+              "thumbnails": [],
+              "label": "Image"
+            }
+          },
+          "kicker": {
+            "type": "Text",
+            "config": {
+              "label": "kicker"
+            }
+          },
+          "title": {
+            "type": "Text",
+            "config": {
+              "label": "Title"
+            }
+          },
+          "content": {
+            "type": "Text",
+            "config": {
+              "label": "Content"
+            }
+          }
+        },
+        "label": "Feature Item"
+      }
+    }
+  }
+}

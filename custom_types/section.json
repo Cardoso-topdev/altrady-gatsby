@@ -1,0 +1,16 @@
+{
+  "Main" : {
+    "title" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "title"
+      }
+    },
+    "content" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "content"
+      }
+    }
+  }
+}

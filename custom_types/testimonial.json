@@ -1,0 +1,44 @@
+{
+  "Main" : {
+    "title" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Title"
+      }
+    },
+    "content" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Content"
+      }
+    },
+    "testimonial" : {
+      "type" : "Group",
+      "config" : {
+        "fields" : {
+          "img" : {
+            "type" : "Image",
+            "config" : {
+              "constraint" : { },
+              "thumbnails" : [ ],
+              "label" : "Image"
+            }
+          },
+          "title1" : {
+            "type" : "Text",
+            "config" : {
+              "label" : "Title"
+            }
+          },
+          "content1" : {
+            "type" : "Text",
+            "config" : {
+              "label" : "Content"
+            }
+          }
+        },
+        "label" : "Testimonial"
+      }
+    }
+  }
+}

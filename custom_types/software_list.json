@@ -1,0 +1,44 @@
+{
+  "Main": {
+    "title": {
+      "type": "Text",
+      "config": {
+        "label": "Title"
+      }
+    },
+    "software_item": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "img": {
+            "type": "Image",
+            "config": {
+              "constraint": {},
+              "thumbnails": [],
+              "label": "Image"
+            }
+          },
+          "os": {
+            "type": "Text",
+            "config": {
+              "label": "OS"
+            }
+          },
+          "os_description": {
+            "type": "Text",
+            "config": {
+              "label": "OS Description"
+            }
+          },
+          "cta_text": {
+            "type": "Text",
+            "config": {
+              "label": "CTA Text"
+            }
+          }
+        },
+        "label": "Software Item"
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "Main" : {
+    "title" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Title"
+      }
+    },
+    "content" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Content"
+      }
+    },
+    "review_item" : {
+      "type" : "Group",
+      "config" : {
+        "fields" : {
+          "username" : {
+            "type" : "Text",
+            "config" : {
+              "label" : "Username"
+            }
+          },
+          "review" : {
+            "type" : "Text",
+            "config" : {
+              "label" : "Review"
+            }
+          },
+          "marks" : {
+            "type" : "Number",
+            "config" : {
+              "label" : "marks"
+            }
+          }
+        },
+        "label" : "Review Item"
+      }
+    }
+  }
+}

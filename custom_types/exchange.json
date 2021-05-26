@@ -1,0 +1,35 @@
+{
+  "Main" : {
+    "exchange_item" : {
+      "type" : "Group",
+      "config" : {
+        "fields" : {
+          "exc_img" : {
+            "type" : "Image",
+            "config" : {
+              "constraint" : {
+                "width" : 40,
+                "height" : 40
+              },
+              "thumbnails" : [ ],
+              "label" : "exchange image"
+            }
+          },
+          "title" : {
+            "type" : "Text",
+            "config" : {
+              "label" : "title"
+            }
+          },
+          "content" : {
+            "type" : "Text",
+            "config" : {
+              "label" : "content"
+            }
+          }
+        },
+        "label" : "exchange item"
+      }
+    }
+  }
+}
