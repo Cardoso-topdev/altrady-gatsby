@@ -3,10 +3,11 @@ import LandingPageLayout from '../layouts/LandingPageLayout';
 import DownloadHeroSection from '../sections/download-hero';
 import DownloadTradingSoftwareSection from '../sections/download-trading-software';
 import FeatureCTASection from '../sections/feature-cta';
+import { graphql } from 'gatsby'
 
-const Download = () => {
+const Download = ({data}) => {
   return (
-    <LandingPageLayout>
+    <LandingPageLayout navData={data.allPrismicExchange.nodes}>
       <DownloadHeroSection />
       <DownloadTradingSoftwareSection />
       <FeatureCTASection />
@@ -14,4 +15,21 @@ const Download = () => {
   );
 };
 
+export const query = graphql`
+query Download {
+  allPrismicExchange {
+    nodes {
+      dataRaw {
+        exchange_item {
+          content
+          exc_img {
+            url
+          }
+          title
+        }
+      }
+    }
+  }
+}
+`
 export default Download;

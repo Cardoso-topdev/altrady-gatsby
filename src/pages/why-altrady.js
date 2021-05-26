@@ -16,6 +16,7 @@ import {
 } from "../utils/imgLoader"
 import FeatureCTASection from '../sections/feature-cta'
 import JoinNowSection from '../sections/join-now'
+import { graphql } from 'gatsby'
 
 const headerContent = `Easy & Simple Trading Platform For Higher Profits `
 const sectionContent = `Get the power to trade and manage coins from many exchanges in one app.
@@ -75,5 +76,21 @@ const WhyAltrady = () => {
     </LandingPageLayout>
   )
 }
-
+export const query = graphql`
+query WhyAltrady {
+  allPrismicExchange {
+    nodes {
+      dataRaw {
+        exchange_item {
+          content
+          exc_img {
+            url
+          }
+          title
+        }
+      }
+    }
+  }
+}
+`
 export default WhyAltrady

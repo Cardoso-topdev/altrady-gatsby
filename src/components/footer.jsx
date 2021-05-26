@@ -7,15 +7,6 @@ import { BLogo, Facebook, Twitter, Discord, Telegram,   CryptoBaseScannerBitcoin
   Coindelist,
   Coinredact,
   Coinray,
-  Binance,
-  Bittrex,
-  Hitbtc,
-  Kucoin,
-  Huobi,
-  CoinbasePro,
-  Kraken,
-  Okex,
-  Poloniex,
 } from "../utils/imgLoader"
 
 const features = [

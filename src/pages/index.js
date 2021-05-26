@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql } from 'gatsby'
-
 import LandingPageLayout from "../layouts/LandingPageLayout"
 import HeroSection from "../sections/hero"
 import ExchangeSection from "../sections/exchanges"
@@ -17,7 +16,8 @@ import LevelUpCTASection from "../sections/level-up-cta"
 import TradingSoftwareSection from "../sections/trading-software"
 
 export default function Home({data}) {
-  const exchangeData = data.allPrismicExchange.nodes[1].dataRaw.exchange_item
+  const exchangeData = data.allPrismicExchange.nodes[2].dataRaw.exchange_item
+
   const benefitSectionData = data.allPrismicExchange.nodes[0].dataRaw.exchange_item
   const heroSectionData = data.allPrismicHeroSection.nodes[0].data
 
@@ -41,7 +41,7 @@ export default function Home({data}) {
   const softwareListData = data.allPrismicSoftwareList.nodes[0].data
   
   return (
-    <LandingPageLayout exchangeData={exchangeData}>
+    <LandingPageLayout navData={data.allPrismicExchange.nodes}>
       <HeroSection heroSectionData={heroSectionData}/>
       <ExchangeSection exchangeData={exchangeData}/>
       <BenefitSection 
@@ -71,7 +71,7 @@ export default function Home({data}) {
 }
 
 export const query = graphql`
-query Exchanges {
+query Home {
   allPrismicExchange {
     nodes {
       dataRaw {

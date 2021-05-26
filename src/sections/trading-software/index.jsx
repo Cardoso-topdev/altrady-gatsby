@@ -9,7 +9,7 @@ const TradingSoftwareSection = ({title, software_item}) => {
       <SectionHeader title={title} />
 
       <div className="row software-container">
-        {software_item.map( (item, idx) => (
+        {software_item?.map( (item, idx) => (
           <SoftwareCard {...item} key={idx} clsName="col-lg-6 col-sm-6"/>
         ))}
       </div>

@@ -9,7 +9,15 @@ import NavExchangesTab from './NavExchangesTab';
 import NavResourcesTab from './NavResourcesTab';
 import BodyClassName from 'react-body-classname';
 
-const Header = ({exchangeData}) => {
+const Header = ({navData}) => {
+  const exchangeData = navData[2].dataRaw.exchange_item
+  const navFeatureAnalyzeData = navData[1].dataRaw.exchange_item
+  const navResourceExchangeData = navData[3].dataRaw.exchange_item
+  const navResourceResourceData = navData[4].dataRaw.exchange_item
+  const navFeatureExcuteData = navData[5].dataRaw.exchange_item
+  const navFeatureDiscoverData = navData[6].dataRaw.exchange_item
+  const navResourcePartnerData = navData[7].dataRaw.exchange_item
+
   const [hambugerActive, setHambugerActiveState] = useState(false)
   const [navMenuShow, setNavMenuShow] = useState(["", "", ""])
   const hamburgerHandler = () => {
@@ -60,7 +68,11 @@ const Header = ({exchangeData}) => {
               <ul className={navMenuClsName}>
                 <li className={"nav-item dropdown " + navMenuShow[0]} onClick={() => navMenuClick(0)}>
                   <Link to="/features" className="nav-link dropdown-item">Features<span /></Link>
-                  <NavFeatureTab />
+                  <NavFeatureTab 
+                    navFeatureExcuteData={navFeatureExcuteData}
+                    navFeatureDiscoverData={navFeatureDiscoverData}
+                    navFeatureAnalyzeData={navFeatureAnalyzeData}
+                    />
                 </li>
                 <li className={"nav-item dropdown " + navMenuShow[1]} onClick={() => navMenuClick(1)}>
                   <Link to="/exchanges" className="nav-link dropdown-item">Exchanges<span /></Link>
@@ -74,7 +86,11 @@ const Header = ({exchangeData}) => {
                 </li>
                 <li className={"nav-item dropdown " + navMenuShow[2]} onClick={() => navMenuClick(2)}>
                   <Link to="#resources" className="nav-link dropdown-item">Resources<span /></Link>
-                  <NavResourcesTab />
+                  <NavResourcesTab 
+                    navResourceExchangeData={navResourceExchangeData}
+                    navResourceResourceData={navResourceResourceData}
+                    navResourcePartnerData={navResourcePartnerData}
+                    />
                 </li>
                 <li className="action-btns">
                   <LinkSecondBtn to="#login">Log in</LinkSecondBtn>

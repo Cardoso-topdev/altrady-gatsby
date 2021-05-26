@@ -14,6 +14,7 @@ import {
   LearnTrading,
   RealTimeAlerts
 } from "../utils/imgLoader"
+import { graphql } from 'gatsby'
 
 const benefitTitle = "Multiple Benefits. Single Platform."
 const benefitContent= `With Altrady, you are at a huge advantage!
@@ -52,9 +53,10 @@ Our tools and technology give you the easiest way to manage your trades and port
   },
 ]
 
-export default function Feature() {
+export default function Feature({data}) {
+  const softwareListData = data.allPrismicSoftwareList.nodes[0].data
   return (
-    <LandingPageLayout>
+    <LandingPageLayout navData={data.allPrismicExchange.nodes}>
       <HeroSection extraClsName="light-bk"/>
       <AllFeatures />
       <BenefitSection 
@@ -63,7 +65,40 @@ export default function Feature() {
         benefitSectionData={benefitSectionData}
       />
       <LevelUpCTASection />
-      <TradingSoftwareSection />
+      <TradingSoftwareSection {...softwareListData}/>
     </LandingPageLayout>
   )
 }
+
+export const query = graphql`
+query Feature {
+  allPrismicExchange {
+    nodes {
+      dataRaw {
+        exchange_item {
+          content
+          exc_img {
+            url
+          }
+          title
+        }
+      }
+    }
+  }
+  allPrismicSoftwareList {
+    nodes {
+      data {
+        title
+        software_item {
+          cta_text
+          img {
+            url
+          }
+          os
+          os_description
+        }
+      }
+    }
+  }
+}
+`

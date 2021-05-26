@@ -6,7 +6,7 @@ const SoftwareCard = ({os, os_description, img, cta_text, clsName}) => {
   return (
     <div className={clsName}>
       <div className="software-card">
-        <img alt={os} src={img.url} className="benefit-item__image" />
+        <img alt={os} src={img?.url} className="benefit-item__image" />
         <h4 className="os">{os}</h4>
         <p className="description">{os_description}</p>
         <ActionBtn ctaText={cta_text}/>

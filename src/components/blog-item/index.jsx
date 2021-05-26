@@ -13,7 +13,7 @@ const BlogItem = ({
   return (
     <div className={"item " + size + clsName}>
       <div className="img-overlay-container position-relative">
-        <img alt={title} src={img.url} className="item__img w-100" />
+        <img alt={title} src={img?.url} className="item__img w-100" />
         <div className="overlay position-absolute w-100 h-100"></div>
       </div>
       <p className={"caption item__type " + color}>{type}</p>

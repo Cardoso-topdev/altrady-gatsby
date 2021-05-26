@@ -14,7 +14,7 @@ const BenefitSection = ({title, content, benefitSectionData}) => {
         {benefitSectionData.map( (item, idx) => <BenefitItem 
           key={idx}
           { ...item}
-          imgSrc={item.exc_img.url} />)}
+          imgSrc={item.exc_img?.url} />)}
       </div>
     </SectionLayout>
   );

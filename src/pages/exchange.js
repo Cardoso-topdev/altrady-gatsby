@@ -8,6 +8,7 @@ import {
 import FeaturesListSection from '../sections/features-list'
 import LevelUpCTASection from '../sections/level-up-cta'
 import TradingSoftwareSection from '../sections/trading-software'
+import { graphql } from 'gatsby'
 
 const benefitTitle = "Binance Exchange Benefits"
 const benefitContent= `With Altrady, you are at a huge advantage!
@@ -48,9 +49,10 @@ const benefitSectionData = [
 const featuresListTitle = "Make Binance even better with following Altrady features"
 const featuresListContent = `With Altrady, you are at a huge advantage!
 Our tools and technology give you the easiest way to manage your trades and portfolio.`
-const Exchange = () => {
+const Exchange = ({data}) => {
+  const softwareListData = data.allPrismicSoftwareList.nodes[0].data
   return (
-    <LandingPageLayout>
+    <LandingPageLayout navData={data.allPrismicExchange.nodes}>
       <ExchangeDetailHeroSection />
       <BenefitSection 
         title={benefitTitle}
@@ -62,9 +64,42 @@ const Exchange = () => {
         content={featuresListContent}
       />
       <LevelUpCTASection />
-      <TradingSoftwareSection />
+      <TradingSoftwareSection {...softwareListData}/>
     </LandingPageLayout>
   )
 }
+
+export const query = graphql`
+query Exchange {
+  allPrismicExchange {
+    nodes {
+      dataRaw {
+        exchange_item {
+          content
+          exc_img {
+            url
+          }
+          title
+        }
+      }
+    }
+  }
+  allPrismicSoftwareList {
+    nodes {
+      data {
+        title
+        software_item {
+          cta_text
+          img {
+            url
+          }
+          os
+          os_description
+        }
+      }
+    }
+  }
+}
+`
 
 export default Exchange
