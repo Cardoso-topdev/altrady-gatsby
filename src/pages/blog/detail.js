@@ -66,6 +66,7 @@ const featuresBlogData = [
     imgSrc: BlogImg
   }
 ]
+// 
 const BlogDetail = () => {
   return (
     <BlogPageLayout>
@@ -75,7 +76,7 @@ const BlogDetail = () => {
           content={blogDetailContentData}
           features={featuresBlogData}/>
 
-        <BlogDetailList />
+        {/* <BlogDetailList /> */}
       </div>
     </BlogPageLayout>
   );

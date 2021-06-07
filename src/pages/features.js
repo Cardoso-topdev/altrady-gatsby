@@ -24,13 +24,13 @@ export const query = graphql`
 query Features {
   allPrismicExchange {
     nodes {
-      dataRaw {
+      data {
         exchange_item {
+          title
           content
           exc_img {
             url
           }
-          title
         }
       }
     }

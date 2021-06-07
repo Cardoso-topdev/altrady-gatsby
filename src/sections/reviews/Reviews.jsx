@@ -10,7 +10,7 @@ const ReviewsSection = ({content, title, review_item}) => {
         title={title}
         content={content} />
       <div className="row">
-        {review_item.map( (item, idx) => <ReviewItem 
+        {review_item?.map( (item, idx) => <ReviewItem 
             {...item}
             userName={item.username}
             key={idx} />)}

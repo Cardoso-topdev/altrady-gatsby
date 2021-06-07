@@ -23,7 +23,7 @@ const PeopleSayingSection3 = ({
       <div className="row text-center testimonial-wrapper">
         <TestmonialCard3
           review={testimonial}
-          imgSrc={img.url}
+          imgSrc={img?.url}
           name={username}
           position={position} />
       </div>

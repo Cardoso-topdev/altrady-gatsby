@@ -1,0 +1,48 @@
+{
+  "Main" : {
+    "image" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "Image"
+      }
+    },
+    "category_name" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Category Name"
+      }
+    },
+    "category_slug" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Category Slug"
+      }
+    },
+    "category_color" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Category Color"
+      }
+    },
+    "meta_title" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Meta Title"
+      }
+    },
+    "meta_description" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Meta Description"
+      }
+    },
+    "meta_keywords" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Meta Keywords"
+      }
+    }
+  }
+}

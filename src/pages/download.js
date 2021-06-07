@@ -19,7 +19,7 @@ export const query = graphql`
 query Download {
   allPrismicExchange {
     nodes {
-      dataRaw {
+      data {
         exchange_item {
           content
           exc_img {

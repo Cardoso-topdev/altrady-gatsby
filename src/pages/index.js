@@ -16,9 +16,10 @@ import LevelUpCTASection from "../sections/level-up-cta"
 import TradingSoftwareSection from "../sections/trading-software"
 
 export default function Home({data}) {
-  const exchangeData = data.allPrismicExchange.nodes[2].dataRaw.exchange_item
+  console.log("AAAAA: ", data.allPrismicExchange)
+  const exchangeData = data.allPrismicExchange.nodes[2].data.exchange_item
 
-  const benefitSectionData = data.allPrismicExchange.nodes[0].dataRaw.exchange_item
+  const benefitSectionData = data.allPrismicExchange.nodes[0].data.exchange_item
   const heroSectionData = data.allPrismicHeroSection.nodes[0].data
 
   const benefitTitle = data.allPrismicSection.nodes[2].data.title
@@ -36,7 +37,9 @@ export default function Home({data}) {
 
   const bestCryptorSectionTitle = data.allPrismicSection.nodes[1].data.title
   const bestCryptorSectionContent = data.allPrismicSection.nodes[1].data.content
-  const bestCryptorSectionData = data.allPrismicBlogList.nodes[0].data.blog_item
+
+  const bestCryptorSectionData = data.allPrismicBlogPost.nodes
+  const blogCategories = data.allPrismicBlogCategory.nodes
 
   const softwareListData = data.allPrismicSoftwareList.nodes[0].data
   
@@ -63,6 +66,7 @@ export default function Home({data}) {
       <BestCryptorSection 
         title={bestCryptorSectionTitle}
         content={bestCryptorSectionContent}
+        categories={blogCategories}
         data={bestCryptorSectionData}/>
       <LevelUpCTASection />
       <TradingSoftwareSection {...softwareListData}/>
@@ -74,7 +78,7 @@ export const query = graphql`
 query Home {
   allPrismicExchange {
     nodes {
-      dataRaw {
+      data {
         exchange_item {
           content
           exc_img {
@@ -160,20 +164,47 @@ query Home {
       }
     }
   }
-  allPrismicBlogList {
+  allPrismicBlogPost(
+    sort: {order: DESC, fields: data___date}
+    filter: {data: {homepage: {eq: true}}}
+  ) {
     nodes {
       data {
-        blog_item {
-          color
-          content
-          date
-          title
-          type
-          img {
-            url
-          }
+        banner
+        category {
+          id
         }
+        content
+        cover_image {
+          url
+        }
+        date
+        featured
+        homepage
+        meta_description
+        meta_keywords
+        meta_title
+        slug
+        summary
+        thumbnail {
+          url
+        }
+        title
+        trending
       }
+    }
+  }
+  allPrismicBlogCategory {
+    nodes {
+      data {
+        category_color
+        category_name
+        category_slug
+        meta_description
+        meta_keywords
+        meta_title
+      }
+      prismicId
     }
   }
   allPrismicSoftwareList {

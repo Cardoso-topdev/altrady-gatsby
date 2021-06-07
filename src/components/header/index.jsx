@@ -10,13 +10,13 @@ import NavResourcesTab from './NavResourcesTab';
 import BodyClassName from 'react-body-classname';
 
 const Header = ({navData}) => {
-  const exchangeData = navData[2].dataRaw.exchange_item
-  const navFeatureAnalyzeData = navData[1].dataRaw.exchange_item
-  const navResourceExchangeData = navData[3].dataRaw.exchange_item
-  const navResourceResourceData = navData[4].dataRaw.exchange_item
-  const navFeatureExcuteData = navData[5].dataRaw.exchange_item
-  const navFeatureDiscoverData = navData[6].dataRaw.exchange_item
-  const navResourcePartnerData = navData[7].dataRaw.exchange_item
+  const exchangeData = navData[2].data.exchange_item
+  const navFeatureAnalyzeData = navData[1].data.exchange_item
+  const navResourceExchangeData = navData[3].data.exchange_item
+  const navResourceResourceData = navData[4].data.exchange_item
+  const navFeatureExcuteData = navData[5].data.exchange_item
+  const navFeatureDiscoverData = navData[6].data.exchange_item
+  const navResourcePartnerData = navData[7].data.exchange_item
 
   const [hambugerActive, setHambugerActiveState] = useState(false)
   const [navMenuShow, setNavMenuShow] = useState(["", "", ""])

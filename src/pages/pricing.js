@@ -24,7 +24,7 @@ export const query = graphql`
 query Pricing {
   allPrismicExchange {
     nodes {
-      dataRaw {
+      data {
         exchange_item {
           content
           exc_img {

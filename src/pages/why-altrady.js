@@ -47,9 +47,9 @@ Our tools and technology give you the easiest way to manage your trades and port
     imgSrc: FundSecurity
   }
 ]
-const WhyAltrady = () => {
+const WhyAltrady = ({data}) => {
   return (
-    <LandingPageLayout>
+    <LandingPageLayout navData={data.allPrismicExchange.nodes}>
       <HeroComponent
         clsName="section hero why-altrady"
         headerContent={headerContent}
@@ -80,7 +80,7 @@ export const query = graphql`
 query WhyAltrady {
   allPrismicExchange {
     nodes {
-      dataRaw {
+      data {
         exchange_item {
           content
           exc_img {

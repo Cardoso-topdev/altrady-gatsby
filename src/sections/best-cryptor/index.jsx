@@ -3,7 +3,7 @@ import BlogItem from '../../components/blog-item';
 import SectionHeader from '../../components/common/SectionHeader';
 import SectionLayout from '../../layouts/SectionLayout';
 
-const BestCryptorSection = ({title, content, data}) => {
+const BestCryptorSection = ({title, content, data, categories}) => {
   return (
     <SectionLayout
       sectionName="best-cryptor">
@@ -14,6 +14,7 @@ const BestCryptorSection = ({title, content, data}) => {
         {data.map( (item, idx) => (
           <BlogItem 
             {...item} 
+            categories={categories}
             size="small " 
             clsName="col-lg-3 col-sm-6" 
             key={idx}/>

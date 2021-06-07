@@ -10,7 +10,7 @@ const LandingPageLayout = ({children, navData}) => {
       <main>
         {children}
       </main>
-      <Footer exchangeData={navData[2].dataRaw.exchange_item}/>
+      <Footer exchangeData={navData[2].data.exchange_item}/>
     </>
   );
 };

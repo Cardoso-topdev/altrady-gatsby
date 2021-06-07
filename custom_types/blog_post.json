@@ -1,0 +1,103 @@
+{
+  "Main" : {
+    "thumbnail" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "ThumbNail"
+      }
+    },
+    "cover_image" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "Cover Image"
+      }
+    },
+    "title" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Title"
+      }
+    },
+    "content" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Content"
+      }
+    },
+    "slug" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Slug"
+      }
+    },
+    "meta_title" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Meta Title"
+      }
+    },
+    "meta_description" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Meta Description"
+      }
+    },
+    "meta_keywords" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Meta Keywords"
+      }
+    },
+    "summary" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Summary"
+      }
+    },
+    "category" : {
+      "type" : "Link",
+      "config" : {
+        "select" : "document",
+        "label" : "Category"
+      }
+    },
+    "featured" : {
+      "type" : "Boolean",
+      "config" : {
+        "default_value" : false,
+        "label" : "Featured"
+      }
+    },
+    "trending" : {
+      "type" : "Boolean",
+      "config" : {
+        "default_value" : false,
+        "label" : "Trending"
+      }
+    },
+    "date" : {
+      "type" : "Date",
+      "config" : {
+        "label" : "Date"
+      }
+    },
+    "banner" : {
+      "type" : "Boolean",
+      "config" : {
+        "default_value" : false,
+        "label" : "Banner"
+      }
+    },
+    "homepage" : {
+      "type" : "Boolean",
+      "config" : {
+        "default_value" : false,
+        "label" : "Homepage"
+      }
+    }
+  }
+}

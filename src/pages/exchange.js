@@ -73,7 +73,7 @@ export const query = graphql`
 query Exchange {
   allPrismicExchange {
     nodes {
-      dataRaw {
+      data {
         exchange_item {
           content
           exc_img {
